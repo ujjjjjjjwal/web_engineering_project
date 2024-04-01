@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginFormContainer">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button id="showRegisterFormBtn">Register</button>
+        </div>
+
+        <div id="registerFormContainer" style="display: none;">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="newUsername">New Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <button type="submit">Register</button>
+            </form>
+            <button id="showLoginFormBtn">Back to Login</button>
+        </div>
+
+        <div id="marksTable" style="display: none;">
+            <h2>Marks</h2>
+            <table id="marks">
+                <!-- Marks will be inserted here dynamically -->
+            </table>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
